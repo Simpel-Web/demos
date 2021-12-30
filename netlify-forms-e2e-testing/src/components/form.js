@@ -16,22 +16,22 @@ const FormComponent = () => {
   const sendForm = (formData, event) => {
     setResult(JSON.stringify(formData));
     event.preventDefault();
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": "contact",
-        ...formData,
-      }),
-    })
-      .then((response) => {
-        if (response.ok) {
-          console.log("Message successfully sent.");
-        } else {
-          console.error("Oops. Something went wrong.");
-        }
-      })
-      .catch((e) => console.error(e));
+    // fetch("/", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    //   body: encode({
+    //     "form-name": "contact",
+    //     ...formData,
+    //   }),
+    // })
+    //   .then((response) => {
+    //     if (response.ok) {
+    //       console.log("Message successfully sent.");
+    //     } else {
+    //       console.error("Oops. Something went wrong.");
+    //     }
+    //   })
+    //   .catch((e) => console.error(e));
   };
 
   return (
