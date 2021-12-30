@@ -1,0 +1,28 @@
+name: Test Netlify Form to get notified when form is not working
+
+on:
+  schedule:
+    - cron: "0 0 1 * *" # first of each month
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14.x"
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          browser: chrome
+          working-directory: netlify-forms-e2e-testing
+          spec: cypress/integration/form.test.ts
+        env:
+          CYPRESS_BASE_URL: https://gifted-lumiere-295ebc.netlify.app/
