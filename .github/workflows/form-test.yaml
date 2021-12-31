@@ -1,8 +1,9 @@
 name: Test Netlify Form to get notified when form is not working
 
 on:
-  schedule:
-    - cron: "0 0 1 * *" # first of each month
+  # schedule:
+  #  - cron: "0 0 1 * *" # first of each month
+  workflow_dispatch
 
 jobs:
   cypress-run:
