@@ -42,7 +42,7 @@ describe("Form Test", () => {
           lastName: "Web",
           category: "A",
         };
-        cy.get("@consoleLog").should("be.calledWith", JSON.stringify(expected));
+
         cy.get("@consoleLog").should(
           "be.calledWith",
           "Message successfully sent."
