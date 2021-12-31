@@ -37,12 +37,6 @@ describe("Form Test", () => {
         assertCorrectRequest(intercept);
       })
       .then(() => {
-        var expected = {
-          firstName: "Simpel",
-          lastName: "Web",
-          category: "A",
-        };
-
         cy.get("@consoleLog").should(
           "be.calledWith",
           "Message successfully sent."
