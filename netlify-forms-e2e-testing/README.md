@@ -7,4 +7,4 @@ The monthly running Github workflow is failing as the submittion of the form is 
 
 Checkout the live demo: [Netlify Form App](https://gifted-lumiere-295ebc.netlify.app/)
 
-Checkout our related Blog post:
+Checkout our related Blog post: [E2E-Testing von Netlify Forms mit Cypress und Github Actions](https://simpel-web.de/blog/e2e-testing-von-netlify-forms-mit-cypress-und-github-actions)
